@@ -1,12 +1,1 @@
-<%= form_for User.new do |f| %>
-	<%= f.label :first_name %>
-	<%= f.text_field :first_name %>
-
-	<%= f.label :email %>
-	<%= f.text_field :email %>
-
-	<%= f.label :password %>
-	<%= f.text_field :password %>
-
-	<%= f.submit "submit" %>
-<% end %>
+<%= render "form" %>
