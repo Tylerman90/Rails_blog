@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-	before_filter :load_article, :only => [:show, :update, :destroy]
+	before_filter :load_article, :only => [:edit, :show, :update, :destroy]
 
 	def index
 		@articles = Article.all.order("Created_at DESC")
@@ -8,6 +8,10 @@ class ArticlesController < ApplicationController
 
 	def show
 
+	end
+
+	def edit
+		
 	end
 
 	def new
@@ -18,7 +22,7 @@ class ArticlesController < ApplicationController
 		@article = Article.create(article_params)
 		if @article.save
 			flash[:success] = "Article created!"
-			redirect_to articles_path(@article)
+			redirect_to article_path(@article)
 		else
 			render 'new'
 		end
@@ -27,7 +31,7 @@ class ArticlesController < ApplicationController
 	def update
 		if @article.update(article_params)
 			flash[:success] = "Article updated!"
-			redirect_to articles_path(@article)
+			redirect_to article_path(@article)
 		else
 			render 'edit'
 		end
@@ -43,8 +47,8 @@ class ArticlesController < ApplicationController
 	end
 
 	private
-	def articles_params
-		params.require(:article).oermit(:title, :body)
+	def article_params
+		params.require(:article).permit(:title, :body)
 	end
 
 	def load_article
