@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsNew</title>
-    <%= csrf_meta_tags %>
+<head>
+	<title>RailsNew</title>
+	<%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
 
-<header>
-	<div class="container">
-		<h3><%= link_to root_path, class: "backhome" do %>Rails Blog<%end%></h3>
-		<div>
-			<span>Follow me on</span>
-			<ul>
-			<li><a href="https://www.facebook.com/profile.php?id=100010840531196" target=_blank></audio><i class="fa fa-facebook"></i></a></li>
-				<li><a href="#" target=_blank><i class="fa fa-snapchat"></i></a></li>
-				<li><a href="#" target=_blank><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#" target=_blank><i class="fa fa-instagram"></i></a></li>
-				<li><a href="#" target=_blank><i class="fa fa-linkedin"></i></a></li>
-				<li><a href="#" target=_blank><i class="fa fa-google-plus"></i></a></li>
-			</ul>
+	<header>
+		<div class="container">
+			<h3><%= link_to root_path, class: "backhome" do %>Rails Blog<%end%></h3>
+			<div>
+				<span>Follow me on</span>
+				<ul>
+					<li><a href="https://www.facebook.com/profile.php?id=100010840531196" target=_blank></audio><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" target=_blank><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" target=_blank><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#" target=_blank><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="#" target=_blank><i class="fa fa-github"></i></a></li>
+				</ul>
+			</div>
 		</div>
+	</header>
+
+	<div class="wrapper">
+
+		<%= yield %>
+
 	</div>
-</header>
 
-<div class="wrapper">
-	
-    <%= yield %>
-	
-</div>
-
-  </body>
+</body>
 </html>
