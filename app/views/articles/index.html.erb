@@ -19,7 +19,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<%= @articles.each do |article| %>
+		<% @articles.each do |article| %>
 		<tr>
 			
 			<td><%= article.title %></td>
@@ -28,7 +28,7 @@
 				<%= link_to edit_article_path(article) do %><i class='fa fa-pencil'></i><% end %>
 				<%= link_to article, method: :delete do %><i class='fa fa-trash-o'></i><% end %>
 			</td>
-			<td><%= article.created_at.strftime("%d.%m.%Y") %></td>
+			<td><%= article.created_at.strftime("%m.%d.%Y") %></td>
 		</tr>
 		<% end %>
 	</tbody>
