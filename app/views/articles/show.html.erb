@@ -1,0 +1,6 @@
+<div class="article-top">
+	<h4 class="article-title"><%= @article.title %></h4>
+	<%= link_to articles_path, class: "new-article" do %><i class="fa fa-arrow-left"></i><% end %>
+</div>
+
+<%= raw(@article.body.gsub(/\n/,'<br>')) %>

@@ -1,0 +1,132 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.empty-state {
+	text-align: center;
+	& span {
+		font-size: 4em;
+		color: #02C8A7;
+	}
+	& h5 {
+		margin-top: 5px;
+		font-size: 1.3em;
+		font-weight: 300;
+	}
+}
+
+.article-top{
+	width: 100%;
+	border-bottom: 1px dotted #e5e5e5;
+	margin-bottom: 20px;
+	& .article-title {
+		display: inline-block;
+		border-bottom: 0;
+		margin: 6px 0;
+		letter-spacing: 1px;
+	}
+
+	&	.new-article {
+		color: #02C8A7;
+		border: 1px solid #02C8A7;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		padding-top: 4px;
+		border-radius: 100%;
+		float: right;
+		&:hover {
+			background: #02C8A7;
+			color: #fff;
+		}
+	}
+}
+
+.field, .action {
+	padding: 10px 20px;
+}
+.field {
+	& label {
+		display: inline-block;
+		width: 50px;
+		letter-spacing: 0.7px;
+		font-weight: 700;
+		vertical-align: top;
+	}
+	& input[type=text], textarea {
+		width: 250px;
+		border-radius: 4px;
+		border: 1px solid #e5e5e5;
+		padding: 10px;
+	}
+	& textarea {
+		height: 250px;
+	}
+	& input:focus, textarea:focus {
+		outline: 0;
+		border: 1px solid #02C8A7;
+	}
+}
+.action {
+
+	& input[type=submit] {
+		border: 1px solid #e5e5e5;
+		padding: 8px 20px;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		background: #02C8A7;
+		color: #fff;
+		border-radius: 4px;
+		box-shadow: 0 4px 4px #e5e5e5;
+		cursor: pointer;
+		&:hover {
+			background: #fff;
+			color: #02C8A7;
+			border: 1px solid #02C8A7;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
+}
+
+table {
+	width: 100%;
+	& thead {
+		font-size: 0.8em;
+		letter-spacing: 1px;
+		& th {
+			padding-bottom: 5px;
+			border-bottom: 1px solid #e5e5e5;
+		}
+		& tr:first-child {
+			text-align: left;
+		}
+		& th:nth-child(2) {
+			text-align: center;
+		}
+		& th:last-child {
+			text-align: right;
+		}
+	}
+	& tbody {
+		& tr {
+			& td:first-child {
+				text-align: left;
+			}
+			& td:nth-child(2) {
+				text-align: center;
+				& a {
+					color: #02C8A7;
+					display: inline-block;
+					margin-left: 5px;
+				}
+			}
+			& td:last-child {
+				text-align: right;
+			}
+			& td {
+				padding: 10px;
+			}
+		}
+	}
+}

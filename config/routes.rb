@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	root "users#index"
-	
-	resources :users
+	root "static_pages#index"
+
+	resources :static_pages, :articles
 end

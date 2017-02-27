@@ -1,0 +1,36 @@
+<div class="article-top">
+	<h4 class="article-title">All articles</h4>
+	<%= link_to new_article_path, class: "new-article" do %><i class="fa fa-plus"></i><% end %>
+</div>
+<% if @articles.blank? %>
+
+<div class="empty-state">
+	<span class="fa fa-smile-o"></span>
+	<h5>There are currently no articles. Come back later.</h5>
+</div>
+
+<% else %>
+<table>
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Actions</th>
+			<th>Created at</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @articles.each do |article| %>
+		<tr>
+			
+			<td><%= article.title %></td>
+			<td>
+				<%= link_to article do %><i class='fa fa-arrow-right'></i><% end %>
+				<%= link_to edit_article_path(article) do %><i class='fa fa-pencil'></i><% end %>
+				<%= link_to article, method: :delete do %><i class='fa fa-trash-o'></i><% end %>
+			</td>
+			<td><%= article.created_at.strftime("%m.%d.%Y") %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<% end %>
